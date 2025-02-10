@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    place-items: center;
+}
+
+body {
+    display: flex;
+    background-color: lavender;
+    margin: 50px;
+}
+
+
+.container {
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 5px 10px 8px 0 #888;
+    place-items: center;
+}
+
+.bg-image {
+    width: 380px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    place-items: center;
+}
+
+.image {
+    width: 380px;
+}
+
+.info {
+    width: 360px;
+    height: auto;
+    margin: 10px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+#Title {
+    font-size: 1.2em;
+}
+#Name {
+    position: absolute;
+    font-size: 0.9em;
+}
+
+.heart {
+    font-size: 1.7em;
+}
+.heart:hover {
+    cursor: pointer;
+}
+
+.progress-container {
+    display: flex;
+    width: 360px;
+    height: auto;
+    margin: 20px 0 0 0;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.current-time, .total-time {
+    font-size: 0.8em;
+}
+.progress-bar {
+    width: 280px;
+    height: 4px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+.progress {
+    height: 4px;
+    max-width: 280px;
+    border-radius: 20px;
+    position: absolute;
+    background: black;
+}
+.navigator {
+    display: flex;
+    margin: 10px;
+}
+.action-btn {
+    margin: 0 20px;
+    border: 0;
+    background-color: white;
+    font-size: 1.6rem;
+    display: flex;
+}
+
+.action-btn:hover {
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.volume-bar {
+    display: none;
+    position: absolute;
+    background: #fff;
+    width: 100px;
+    height: 50px;
+    box-shadow: 5px 10px 8px 0 #888;
+    width: 400px;
+    left: -36px;
+    border-radius: 30px;
+    margin: 40px 0 0 0;
+    place-items: center;
+}
+
+
+.volume-slider {
+    width: 300px;
+    background: black;
+}
+
+
+
+
+.disk-container {
+    width: 350px;
+    height: 350px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: -1;
+    position: relative;
+    place-items: center;
+    display: grid;
+    box-shadow: 5px 10px 8px 0 #888;
+    top: -355px;
+    left: -200px;
+}
+
+
+
+
+.disk-container::after {
+    content: '';
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    border-radius: 50%;
+}
+.disk {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+
+    animation-play-state: paused;
+
+}
+.disk-container.play .disk {
+    animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+      background-color: lightgreen;
+    }
+    .disk-container {
+        display: none;
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    body {
+      background-color: lavender;
+    }
+    .disk-container {
+        display: grid;
+    }
+  }
+
+
+.menu {
+    display: none;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background: white;
+    box-shadow: 5px 10px 8px 0 #888;
+    border-radius: 20px;
+    top: -340px;
+    right: -450px;
+}
+
+.menu ul {
+    width: 380px;
+    height: 400px;
+    list-style: none;
+    justify-items: left;
+}
+
+.menu h1 {
+    margin: 10px 0 0 10px;
+    color: black;
+}
+
+.menu h1::after {
+    content: '';
+    width: 380px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    left: 10px;
+    top: 45px;
+}
+.menu .li {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    transition: 0.5s linear;
+}
+
+.menu li a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    width: 340px;
+    transition: 0.25s linear;
+}
+.menu li a:hover {
+    background: rgb(41, 41, 97);
+    color: white;
+}
+
+.menu .song.play {
+    background: lavender;
+    color: black;
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "disk": "image/disks/breathe.png",
+        "title": "Breath",
+        "name": "Year and Years",
+        "audio": "music/breathe.mp3"
+    },
+    {
+        "disk": "image/disks/boyfriend.png",
+        "title": "Boyfriend",
+        "name": "Ariana Grande, Social House",
+        "audio": "music/boyfriend.mp3"
+    },
+    {
+        "disk": "image/disks/wedonttalkanymore.png",
+        "title": "We don't talk anymore",
+        "name": "Charlie Puth",
+        "audio": "music/wedonttalkanymore.mp3"
+    }
+]

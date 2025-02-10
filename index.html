@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="image/logo.ico">
+</head>
+<body>
+    <div class="container">
+        <div class="bg-image">
+            <image src="image/background.png" alt="background image" class="image"></image>
+        </div>
+        <audio src="" id="audio"></audio>
+        <div class="info">
+            <div>
+                <h4 id="Title">Song title</h4>
+                <p id="Name">zzz</p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div id="current-time">00:00</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div id="total-time">00:00</div>
+        </div>
+        <div class="navigator">
+            <div class="dropdown">
+                <button id="volume" class="action-btn">
+                    <ion-icon name="volume-high-outline">.</ion-icon>
+                </button>
+                <div class="volume-bar">
+                    <input type="range" min="0" max="100" value="99" class="volume-slider" onchange="setVolume()">
+                </div>
+            </div>
+            <button id="prev" class="action-btn">
+                <ion-icon name="play-skip-back-outline">.</ion-icon>
+            </button>
+            <button id="play" class="action-btn">
+                <ion-icon name="play-outline" id="myicon">.</ion-icon>
+            </button>
+            <button id="next" class="action-btn">
+                <ion-icon name="play-skip-forward-outline">.</ion-icon>
+            </button>
+            <div class="dropdown">
+                <button id="list" class="action-btn">
+                    <ion-icon name="list-outline">.</ion-icon>
+                </button>
+                <div class="menu">
+                    <ul>
+                        <h1>Music List</h1>
+                        <li><a  href='#' class="song play">Breathe - Year and Years</a></li>
+                        <li><a href='#' class="song">Boyfriend - Ariana Grande, Social House</a></li>
+                        <li><a href='#' class="song">We don't talk anymore -Charlie Puth</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="disk-container">
+            <img src="image/background.png" alt="disk" class="disk">
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
