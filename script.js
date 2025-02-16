@@ -18,10 +18,12 @@ const volume_slider = document.querySelector('.volume-slider')
 const menu = document.querySelector('.menu')
 const list = document.querySelector('#list')
 const song = document.querySelectorAll(".menu li")
+const loop = document.querySelector('#loop')
+const random = document.querySelector('#random')
 
 let songIndex = 0;
 let updateTimer;
-
+let randomMusic = 0;
 let music_list = [];
 
 fetch('music.json')
@@ -104,10 +106,17 @@ function prevsong() {
 }
 
 function nextsong() {
-    songIndex += 1;
+    if(randomMusic == 0) {
+        songIndex += 1;
 
-    if(songIndex > music_list.length - 1) {
+        if(songIndex > music_list.length - 1) {
         songIndex = 0
+        }}
+    else if (randomMusic == 1) {
+        songIndex = Math.floor(Math.random(0, 1) * music_list.length)
+    } 
+    else {
+        songIndex = songIndex
     }
     document.querySelectorAll(".menu li a").forEach(a => a.classList.remove("play"));
 
@@ -148,6 +157,19 @@ playbtn.addEventListener('click', () => {
     }
 })
 
+
+function randomSong() {
+    randomMusic = randomMusic === 1 ? 0 : 1;
+    random.style.color = randomMusic ? 'lightblue' : 'black';
+    loop.style.color = 'black';
+}
+
+function loopSong() {
+    randomMusic = randomMusic === 2 ? 0 : 2;
+    loop.style.color = randomMusic === 2 ? 'lightblue' : 'black';
+    random.style.color = 'black';
+}
+
 prevbtn.addEventListener('click', prevsong)
 nextbtn.addEventListener('click', nextsong)
 
@@ -158,6 +180,9 @@ progressContainer.addEventListener('click', setProgress)
 audio.addEventListener('ended', nextsong)
 volume.addEventListener('click', volume_setting)
 list.addEventListener('click', menu_setting)
+random.addEventListener('click', randomSong)
+loop.addEventListener('click', loopSong)
+
 
 
 
@@ -176,3 +201,4 @@ song.forEach((li, index) => {
         playSong();
     });
 });
+

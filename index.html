@@ -27,14 +27,9 @@
             <div id="total-time">00:00</div>
         </div>
         <div class="navigator">
-            <div class="dropdown">
-                <button id="volume" class="action-btn">
-                    <ion-icon name="volume-high-outline">.</ion-icon>
-                </button>
-                <div class="volume-bar">
-                    <input type="range" min="0" max="100" value="99" class="volume-slider" onchange="setVolume()">
-                </div>
-            </div>
+            <button id="random" class="action-btn">
+                <ion-icon name="shuffle-outline">.</ion-icon>
+            </button>
             <button id="prev" class="action-btn">
                 <ion-icon name="play-skip-back-outline">.</ion-icon>
             </button>
@@ -44,6 +39,17 @@
             <button id="next" class="action-btn">
                 <ion-icon name="play-skip-forward-outline">.</ion-icon>
             </button>
+            <button id="loop" class="action-btn">
+                <ion-icon name="repeat-outline">.</ion-icon>
+            </button>
+            <div class="dropdown">
+                <button id="volume" class="action-btn">
+                    <ion-icon name="volume-high-outline">.</ion-icon>
+                </button>
+                <div class="volume-bar">
+                    <input type="range" min="0" max="100" value="99" class="volume-slider" onchange="setVolume()">
+                </div>
+            </div>
             <div class="dropdown">
                 <button id="list" class="action-btn">
                     <ion-icon name="list-outline">.</ion-icon>
@@ -54,6 +60,9 @@
                         <li><a  href='#' class="song play">Breathe - Year and Years</a></li>
                         <li><a href='#' class="song">Boyfriend - Ariana Grande, Social House</a></li>
                         <li><a href='#' class="song">We don't talk anymore -Charlie Puth</a></li>
+                        <li><a href='#' class="song">Cry for me - Michita</a></li>
+                        <li><a href='#' class="song">Sweater Weather - The Neighbourhood</a></li>
+                        <li><a href='#' class="song">Supernova love - IVE, David Guetta</a></li>
                     </ul>
                 </div>
             </div>

@@ -16,5 +16,23 @@
         "title": "We don't talk anymore",
         "name": "Charlie Puth",
         "audio": "music/wedonttalkanymore.mp3"
+    },
+    {
+        "disk": "image/disks/cryforme.png",
+        "title": "Cry for me",
+        "name": "Michita",
+        "audio": "music/cryforme.mp3"
+    },
+    {
+        "disk": "image/disks/sweaterweather.png",
+        "title": "Sweater Weather",
+        "name": "The Neighbourhood",
+        "audio": "music/sweaterweather.mp3"
+    },
+    {
+        "disk": "image/disks/supernovalove.png",
+        "title": "Supernova love",
+        "name": "IVE, David Guatte",
+        "audio": "music/supernovalove.mp3"
     }
 ]
